@@ -36,21 +36,10 @@ export class Index  extends React.Component {
                  <NavBar/>
                 <Layout className="site-layout" >
 
-                    <Header className="site-layout-background" style={{ padding: 0 }} >
-                        <Row justify="space-around" align="middle">
-                            <Col className={'mobileHidden'} span={17} xs={10} sm={18}>
-                                {/* <Text level={5} style={{ textTransform: 'uppercase' }}>Voting</Text> */}
-                            </Col>
-                            <Col span={6} xs={24} sm={6}>
-                                <div align={'right'} >
-                                    <Button   title={'Logout'} onClick={() => handleLogout()} icon={<PoweroffOutlined size={'small'}/>} type={'default'}/>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Header>
-                    <Content  className="site-layout" style={{ marginTop: 64 }}>
+                    <Header className="site-layout-background" style={{ padding: 0 }} />
+                    <Content style={{ margin: '0 16px' }}>
                          <Breadcrumbs/>
-                        <div className="site-layout-background"  style={{ padding: 24, minHeight: 360 }}>
+                        <div   style={{ padding: 24, minHeight: 360 }}>
                             {this.props.children}
                         </div>
 

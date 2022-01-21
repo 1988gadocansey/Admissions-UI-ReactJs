@@ -33,15 +33,17 @@ const NavBar = () => {
     return (
 
         <Sider className={'sideBar'} collapsible collapsed={open} onCollapse={toggle}
-               breakpoint="lg" collapsedWidth={isMobile ? 0 : 80}
-               style={isMobile ? {height: '100vh', zIndex: 1, position: 'fixed', left: 0} : {
-                   height: '100vh',
-                   left: 0,
-                   position: 'fixed',
-                   backgroundColor: '#152b86',
-                   color: '#fff'
-               }}
-        >
+               breakpoint="lg" collapsedWidth={isMobile ? 0 : 80}>
+            {/* <Sider className={'sideBar'} collapsible collapsed={open} onCollapse={toggle}
+                   breakpoint="lg" collapsedWidth={isMobile ? 0 : 80}
+                   style={isMobile ? {height: '100vh', zIndex: 1, position: 'fixed', left: 0} : {
+                       height: '100vh',
+                       left: 0,
+                       position: 'fixed',
+                       backgroundColor: '#152b86',
+                       color: '#fff'
+                   }}
+            >*/}
 
             <div className="logo"/>
             <div align={'center'} style={{marginTop: 20, marginBottom: 10}}>
@@ -57,19 +59,22 @@ const NavBar = () => {
             <Menu className={'sideBarNav'} theme="dark" defaultSelectedKeys={['1']} mode="inline">
                 <p></p>
 
-                <SubMenu key="sub1" icon={<UserOutlined/>} title="Home">
 
-                    <Menu.Item key="6"><Link to={'/home'}>
+                <Menu.Item key="1" icon={<FileOutlined/>}>
+                    <Link to={'/home'}>
                         Home
-                    </Link></Menu.Item>
-                </SubMenu>
-                <SubMenu key="sub2" icon={<TeamOutlined/>} title="Form">
-                    <Menu.Item key="6"><Link to={'/'}>
-                        Fill Form
-                    </Link></Menu.Item>
-                </SubMenu>
-                <Menu.Item key="9" icon={<FileOutlined/>}>
-                    Files
+                    </Link>
+                </Menu.Item>
+                <Menu.Item key="2" icon={<FileOutlined/>}>
+                    <Link to={'/form/fill'}>
+                        Form
+                    </Link>
+                </Menu.Item>
+
+                <Menu.Item key="3" icon={<PoweroffOutlined/>}>
+                    <Link to={'/home'}>
+                        Logout
+                    </Link>
                 </Menu.Item>
 
 

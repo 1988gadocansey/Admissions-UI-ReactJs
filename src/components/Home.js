@@ -1,8 +1,14 @@
 import React,{Component} from "react";
 
 const Home =()=> {
-    return(
-        <p>Home Component</p>
-    )
+    return [
+
+        <div className="site-layout-background">
+            home
+        </div>
+
+
+
+    ]
 }
 export default Home
